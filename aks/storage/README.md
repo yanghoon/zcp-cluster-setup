@@ -1,6 +1,9 @@
+## PVC Sample
+> storageClassName에 본 폴더에 있는 storageclass를 자유로이 사용해주세요.
 
-### **PVC** 작성 샘플입니다.
-#### storageClassName에 본 폴더에 있는 storageclass를 자유로이 사용해주세요.
+### YAML
+
+``` yaml
 apiVersion: v1  
 kind: PersistentVolumeClaim  
 metadata:  
@@ -12,11 +15,14 @@ spec:
   resources:  
     requests:  
       storage: 5Gi  
-      
+```
 
 
-### **PVC Roles** 작성 샘플입니다.
-#### PV binding을 위해 Cluster Role을 작성합니다.
+## PVC Roles Sample
+> PV binding을 위해 Cluster Role을 작성합니다.
+
+### YAML
+``` yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -38,3 +44,4 @@ subjects:
 - kind: ServiceAccount
   name: persistent-volume-binder
   namespace: kube-system
+```
