@@ -1,18 +1,19 @@
 
 ### **PVC** 작성 샘플입니다.
 #### storageClassName에 본 폴더에 있는 storageclass를 자유로이 사용해주세요.
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: azure-managed-disk
-spec:
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: managed-premium
-  resources:
-    requests:
-      storage: 5Gi
+apiVersion: v1  
+kind: PersistentVolumeClaim  
+metadata:  
+  name: azure-managed-disk  
+spec:  
+  accessModes:  
+  - ReadWriteOnce  
+  storageClassName: managed-premium  
+  resources:  
+    requests:  
+      storage: 5Gi  
       
+
 
 ### **PVC Roles** 작성 샘플입니다.
 #### PV binding을 위해 Cluster Role을 작성합니다.
